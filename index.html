@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Happy Birthday</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:900'>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 80vh;
+      margin: 0;
+      position: relative; /* Tambahkan posisi relatif */
+    }
+    #content {
+      text-align: center;
+      margin-bottom: 0px; /* Jarak antara tulisan dan foto */
+      margin-top: 0px;
+    }
+    #content h1 {
+      white-space: nowrap; /* Hindari wrap pada teks */
+      overflow: hidden; /* Hilangkan overflow jika ada */
+      text-overflow: ellipsis; /* Tambahkan elipsis jika teks terlalu panjang */
+      max-width: 90vw; /* Batasi lebar maksimum */
+      font-size: 80px; /* Ubah ukuran font sesuai kebutuhan */
+    }
+    #image-container {
+      text-align: center;
+      position: absolute; /* Jadikan posisi absolut */
+      bottom: 25px; /* Sesuaikan posisi vertikal */
+    }
+    #image-container img {
+      max-width: 700px; /* Ubah ukuran sesuai kebutuhan */
+      width: 100%;
+      height: auto;
+    }
+    #birthday {
+      position: relative; /* Tambahkan posisi relatif untuk canvas */
+      z-index: -1; /* Letakkan di belakang elemen lain */
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <h1>Happy Birthday Mr. and Mrs. Amri!</h1>
+  </div>
+  <canvas id="birthday"></canvas>
+  <div id="image-container">
+    <img src="https://i.imgur.com/7QZl6M5.jpg" alt="Foto Ucapan Selamat Ultah">
+  </div>
+  <!-- Tambahkan elemen audio -->
+  <audio autoplay loop>
+    <source src="https://drive.google.com/file/d/1sWwVZt2_ivNGkgl1Q-w6xILBCKeNi62P/view?usp=drivesdk" type="mp3">
+  </audio>
+  <script src="./script.js"></script>
+</body>
+</html>
